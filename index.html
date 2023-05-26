@@ -17,6 +17,35 @@
 </head>
 
 <body>
+    <header class="container-fluid text-center text-white bg-primary p-2">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <!-- Left column section for city search -->
+    <div class="container-fluid">
+        <div class="row">
+            <section class="col-lg-3 pb-3">
+                <h2>Search for a City:</h2>
+                <form id="search-form">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="search-input" placeholder="">
+                    </div>
+                    <div class="w-100 border-bottom pb-3">
+                    <button type="submit" class="btn btn-primary w-100" id="search-button">Search</button>
+                    </div>
+                </form>
+                <!-- Previously searched cities will load and display -->
+                <div class="list-group" id="search-history"></div>
+            </section>
+
+             <!-- Right column section for current weather and 5 day forecast-->
+            <div class="col-lg-9 pb-3">
+                <section id="today" class="mt-3" role="region" aria-live="polite"></section>
+                <section id="forecast" class="row mt-3" role="region" aria-live="polite"></section>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
