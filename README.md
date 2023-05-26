@@ -3,7 +3,7 @@ Module 6 Challenge Server-Side APIs: Weather Dashboard
 
 ## Description
 
-This is a weather dashboard built to feature dynamically updated HTML and CSS using the OpenWeatherMap Weather API to retrieve weather data for cities. 
+This is a weather dashboard built to feature dynamically updated HTML and CSS using the OpenWeatherMap API to retrieve weather data for cities. 
 
 ## Usage
 
@@ -15,14 +15,14 @@ The following image demonstrates the application's appearance and functionality:
 
 ## Credits
 
-Following libraries used to create a dynamic weather dashboard:
+Following libraries were used to create a dynamic weather dashboard:
 * jQuery
 * moment.js
 
 ## Links
 
-* URL to deployed application: 
-* URL of GitHub repository: 
+* URL to deployed application: https://suzyhan.github.io/weather-dashboard/
+* URL of GitHub repository: https://github.com/suzyhan/weather-dashboard
 
 ## License
 
