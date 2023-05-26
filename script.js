@@ -101,6 +101,7 @@ function getWeatherData(lat, lon) {
   });
 }
 
+
 // Function to update and display the current weather of city searched
 function updateCityWeather(data) {
     console.log(data);
@@ -125,4 +126,18 @@ function updateCityWeather(data) {
           <p>Humidity: ${humidity} %</p>
         </div>
       `;
+
+    // Updates city search history in local Storage
+    let cityHistory = JSON.parse(localStorage.getItem("cityHistory")) || [];
+
+    // Checks for cities that are not found
+    if (cityHistory.indexOf(cityName) == -1) {
+        cityHistory.unshift(cityName);
+
+    // Checks to store the 5 most recent city searches
+    if (cityHistory.length > 6) {
+        cityHistory.pop();
+    }
+    localStorage.setItem("cityHistory", JSON.stringify(cityHistory));
+    }
 }
