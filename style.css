@@ -1,1 +1,11 @@
+h2 {
+    margin-top: 3%;
+    font-size: 30px;
+    font-weight: bold;
+}
 
+#search-button {
+    background-color: rgb(91, 132, 221);
+    color:white;
+    border-radius: 5px;
+  }
