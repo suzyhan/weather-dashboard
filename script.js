@@ -127,6 +127,74 @@ function updateCityWeather(data) {
         </div>
       `;
 
+    // Display 5 day weather forecast in HTML using moment.js library
+    const daysForecast = document.querySelector("#forecast");
+    daysForecast.innerHTML = `
+        <div class="w-100 p-3">
+        <h2 class="">5-Day Forecast:</h2>
+        </div>
+
+        <div class="col text-white ">
+            <div class="bg-dark me-3 p-3">
+                <h3>${moment(data.list[5].dt_txt).format("MM/DD/YYYY")}</h3>
+                <img src = "https://openweathermap.org/img/w/${
+                data.list[5].weather[0].icon
+                }.png" alt="${moment(data.list[5].dt_txt).format("DD/MM/YYYY")}">
+                <p>Temp: ${((data.list[5].main.temp - 273.15) * 1.80 + 32).toFixed(2)} &#8457;</p>
+                <p>Wind: ${(data.list[5].wind.speed* 2.23694).toFixed(2)} MPH </p>
+                <p>Humidity: ${data.list[5].main.humidity} %</p>
+            </div>
+        </div>
+
+        <div class="col text-white ">
+            <div class="bg-dark me-3 p-3">
+                <h3>${moment(data.list[13].dt_txt).format("MM/DD/YYYY")}</h3>
+                <img src = "https://openweathermap.org/img/w/${
+                data.list[13].weather[0].icon
+                }.png" alt="${moment(data.list[13].dt_txt).format("DD/MM/YYYY")}">
+                <p>Temp: ${((data.list[13].main.temp - 273.15) * 1.80 + 32).toFixed(2)} &#8457;</p>
+                <p>Wind: ${(data.list[13].wind.speed* 2.23694).toFixed(2)} MPH </p>
+                <p>Humidity: ${data.list[13].main.humidity} %</p>
+            </div>
+        </div>
+
+        <div class="col text-white ">
+            <div class="bg-dark me-3 p-3">
+                <h3>${moment(data.list[21].dt_txt).format("MM/DD/YYYY")}</h3>
+                <img src = "https://openweathermap.org/img/w/${
+                data.list[21].weather[0].icon
+                }.png" alt="${moment(data.list[21].dt_txt).format("DD/MM/YYYY")}">
+                <p>Temp: ${((data.list[21].main.temp - 273.15) * 1.80 + 32).toFixed(2)} &#8457;</p>
+                <p>Wind: ${(data.list[21].wind.speed* 2.23694).toFixed(2)} MPH </p>
+                <p>Humidity: ${data.list[21].main.humidity} %</p>
+            </div>
+        </div>
+
+        <div class="col text-white ">
+            <div class="bg-dark me-3 p-3">
+                <h3>${moment(data.list[29].dt_txt).format("MM/DD/YYYY")}</h3>
+                <img src = "https://openweathermap.org/img/w/${
+                data.list[29].weather[0].icon
+                }.png" alt="${moment(data.list[29].dt_txt).format("DD/MM/YYYY")}">
+                <p>Temp: ${((data.list[29].main.temp - 273.15) * 1.80 + 32).toFixed(2)} &#8457;</p>
+                <p>Wind: ${(data.list[29].wind.speed* 2.23694).toFixed(2)} MPH </p>
+                <p>Humidity: ${data.list[29].main.humidity} %</p>
+            </div>
+        </div>
+        
+        <div class="col text-white ">
+            <div class="bg-dark me-3 p-3">
+                <h3>${moment(data.list[37].dt_txt).format("MM/DD/YYYY")}</h3>
+                <img src = "https://openweathermap.org/img/w/${
+                data.list[37].weather[0].icon
+                }.png" alt="${moment(data.list[37].dt_txt).format("DD/MM/YYYY")}">
+                <p>Temp: ${((data.list[37].main.temp - 273.15) * 1.80 + 32).toFixed(2)} &#8457;</p>
+                <p>Wind: ${(data.list[37].wind.speed* 2.23694).toFixed(2)} MPH </p>
+                <p>Humidity: ${data.list[37].main.humidity} %</p>
+            </div>
+        </div>
+        `;
+
     // Updates city search history in local Storage
     let cityHistory = JSON.parse(localStorage.getItem("cityHistory")) || [];
 
